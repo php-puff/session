@@ -1,0 +1,60 @@
+{
+    "name": "puff/session",
+    "description": "Fiber-safe session component for PHP Fiber Framework",
+    "type": "library",
+    "keywords": [
+        "php",
+        "session",
+        "middleware",
+        "fiber",
+        "http",
+        "puff"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "puff/di": "dev-main",
+        "psr/http-message": "^2.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "puff/redis": "dev-main",
+        "phpunit/phpunit": "^11.0"
+    },
+    "suggest": {
+        "puff/redis": "Enables the Redis session store"
+    },
+    "autoload": {
+        "files": [
+            "lib/puff.php"
+        ],
+        "psr-4": {
+            "Puff\\Session\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Puff\\Session\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "puff": {
+            "config": {
+                "session.php": "config/session.php"
+            },
+            "providers": [
+                "Puff\\Session\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "scripts": {
+        "analyse": "phpstan analyse src lib config tests --level=8 --memory-limit=1G",
+        "test": "phpunit tests"
+    }
+}
