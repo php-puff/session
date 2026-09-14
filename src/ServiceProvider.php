@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 /*
- * PHP Fiber Framework
+ * PHP Unison Fiber Framework
  * https://github.com/php-puff/session
  * https://github.com/php-puff/session/issues
  * Copyright (c) Puff

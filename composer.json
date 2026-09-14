@@ -1,6 +1,6 @@
 {
     "name": "puff/session",
-    "description": "Fiber-safe session component for PHP Fiber Framework",
+    "description": "Fiber-safe session component for PHP Unison Fiber Framework",
     "type": "library",
     "keywords": [
         "php",
